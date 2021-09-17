@@ -2,5 +2,30 @@
   width: 346px;
   height: 290px;
   background-color: #f0f3fa;
-  border-radius: 8px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.container:hover {
+  background-color: #e1e3f0;
+}
+
+.facebookBorder {
+  border-top: 5px solid #198ef7;
+}
+
+.twitterBorder {
+  border-top: 5px solid #299ee3;
+}
+
+.instgramBorder {
+  border-top: 5px solid transparent;
+  border-image: linear-gradient(to right, #ffbf69, #e14b95);
+  border-image-slice: 1;
+}
+
+.youtubeBorder {
+  border-top: 5px solid #c20028;
 }

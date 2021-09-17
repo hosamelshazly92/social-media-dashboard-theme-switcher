@@ -23,7 +23,8 @@ function App() {
       id: uuid(),
       name: "nathanf",
       numbers: 1986,
-      type: "followers",
+      type: "facebook",
+      stats: "followers",
       state: 12,
       icon: "https://res.cloudinary.com/ux-ui-designer/image/upload/v1631905009/Assets/icon-facebook_x09bqx.svg",
     },
@@ -31,7 +32,8 @@ function App() {
       id: uuid(),
       name: "like_robinson",
       numbers: 1044,
-      type: "followers",
+      type: "twitter",
+      stats: "followers",
       state: 99,
       icon: "https://res.cloudinary.com/ux-ui-designer/image/upload/v1631905009/Assets/icon-twitter_xaf0jr.svg",
     },
@@ -39,7 +41,8 @@ function App() {
       id: uuid(),
       name: "realsam",
       numbers: 11560,
-      type: "followers",
+      type: "instgram",
+      stats: "followers",
       state: 1084,
       icon: "https://res.cloudinary.com/ux-ui-designer/image/upload/v1631905009/Assets/icon-instagram_ruofi3.svg",
     },
@@ -47,7 +50,8 @@ function App() {
       id: uuid(),
       name: "mark19",
       numbers: 8239,
-      type: "subscribers",
+      type: "youtube",
+      stats: "subscribers",
       state: 144,
       icon: "https://res.cloudinary.com/ux-ui-designer/image/upload/v1631905009/Assets/icon-youtube_j93d63.svg",
     },
@@ -68,7 +72,7 @@ function App() {
             <span className={paragraph}>Dark Mode</span>
             <div className={switchDiv}>
               <input id="switch" className={switchInput} type="checkbox" />
-              <label className={switchLabel} for="switch">
+              <label className={switchLabel} htmlFor="switch">
                 Toggle
               </label>
             </div>
