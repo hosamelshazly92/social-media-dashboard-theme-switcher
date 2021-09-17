@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  color: #202029;
+}
+
+.header {
+  height: 330px;
+  background-color: #f8f9fe;
+}
+
+.container {
+  max-width: 1480px;
+  margin: auto;
+  padding-top: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.paragraph {
+  color: #b6b9ca;
+  font-weight: 800;
+  margin-right: 16px;
+}
+
+.heading {
+  font-weight: 800;
+}
+
+.main {
+  max-width: 1480px;
+  margin: auto;
+  position: relative;
+  top: -145px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.switchDiv {
+  display: flex;
+}
+
+.switchInput {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.switchLabel {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 60px;
+  height: 32px;
+  background: linear-gradient(90deg, #3b99d8, #50c890);
+  display: block;
+  border-radius: 16px;
+  position: relative;
+}
+
+.switchLabel::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.3s;
+  box-shadow: 0 1px 2px #00000040;
+}
+
+.switchInput:checked + .switchLabel {
+  background: #eee;
+}
+
+.switchInput:checked + .switchLabel::after {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+
+.switchLabel:active::after {
+  width: 40px;
+}
