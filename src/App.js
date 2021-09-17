@@ -69,6 +69,7 @@ function App() {
       icon: "https://res.cloudinary.com/ux-ui-designer/image/upload/v1631905009/Assets/icon-facebook_x09bqx.svg",
       numbers: 87,
       stats: 3,
+      trend: true,
     },
     {
       id: uuid(),
@@ -76,6 +77,7 @@ function App() {
       icon: "https://res.cloudinary.com/ux-ui-designer/image/upload/v1631905009/Assets/icon-facebook_x09bqx.svg",
       numbers: 52,
       stats: 2,
+      trend: false,
     },
     {
       id: uuid(),
@@ -83,6 +85,7 @@ function App() {
       icon: "https://res.cloudinary.com/ux-ui-designer/image/upload/v1631905009/Assets/icon-instagram_ruofi3.svg",
       numbers: 5462,
       stats: 2257,
+      trend: true,
     },
     {
       id: uuid(),
@@ -90,6 +93,7 @@ function App() {
       icon: "https://res.cloudinary.com/ux-ui-designer/image/upload/v1631905009/Assets/icon-instagram_ruofi3.svg",
       numbers: 25123,
       stats: 137,
+      trend: true,
     },
     {
       id: uuid(),
@@ -97,6 +101,7 @@ function App() {
       icon: "https://res.cloudinary.com/ux-ui-designer/image/upload/v1631905009/Assets/icon-twitter_xaf0jr.svg",
       numbers: 117,
       stats: 303,
+      trend: true,
     },
     {
       id: uuid(),
@@ -104,6 +109,7 @@ function App() {
       icon: "https://res.cloudinary.com/ux-ui-designer/image/upload/v1631905009/Assets/icon-twitter_xaf0jr.svg",
       numbers: 507,
       stats: 553,
+      trend: true,
     },
     {
       id: uuid(),
@@ -111,6 +117,7 @@ function App() {
       icon: "https://res.cloudinary.com/ux-ui-designer/image/upload/v1631905009/Assets/icon-youtube_j93d63.svg",
       numbers: 92,
       stats: 19,
+      trend: false,
     },
     {
       id: uuid(),
@@ -118,6 +125,7 @@ function App() {
       icon: "https://res.cloudinary.com/ux-ui-designer/image/upload/v1631905009/Assets/icon-youtube_j93d63.svg",
       numbers: 1407,
       stats: 12,
+      trend: false,
     },
   ];
 
