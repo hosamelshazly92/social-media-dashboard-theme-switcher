@@ -6,6 +6,10 @@
   border-bottom-right-radius: 6px;
   transition: all 0.4s ease-in-out;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .container:hover {
@@ -20,7 +24,7 @@
   border-top: 5px solid #299ee3;
 }
 
-.instgramBorder {
+.instagramBorder {
   border-top: 5px solid transparent;
   border-image: linear-gradient(to right, #ffbf69, #e14b95);
   border-image-slice: 1;
@@ -28,4 +32,58 @@
 
 .youtubeBorder {
   border-top: 5px solid #c20028;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 16px;
+}
+
+.name {
+  color: #656876;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.number {
+  font-size: 72px;
+  font-weight: 800;
+  margin-top: 16px;
+}
+
+.stats {
+  color: #656876;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  margin-bottom: 16px;
+}
+
+.state {
+  font-weight: 800;
+}
+
+.row {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.green {
+  color: #68bcaa;
+}
+
+.red {
+  color: #c54755;
+}
+
+.arrow {
+  width: 8px;
+  height: 4px;
 }

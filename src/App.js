@@ -11,6 +11,7 @@ import {
   switchDiv,
   switchInput,
   switchLabel,
+  subheading,
 } from "./App.module.css";
 import { Fragment } from "react";
 import Card from "./components/Card/Card";
@@ -27,6 +28,7 @@ function App() {
       stats: "followers",
       state: 12,
       icon: "https://res.cloudinary.com/ux-ui-designer/image/upload/v1631905009/Assets/icon-facebook_x09bqx.svg",
+      trend: true,
     },
     {
       id: uuid(),
@@ -36,15 +38,17 @@ function App() {
       stats: "followers",
       state: 99,
       icon: "https://res.cloudinary.com/ux-ui-designer/image/upload/v1631905009/Assets/icon-twitter_xaf0jr.svg",
+      trend: true,
     },
     {
       id: uuid(),
       name: "realsam",
       numbers: 11560,
-      type: "instgram",
+      type: "insatgram",
       stats: "followers",
       state: 1084,
       icon: "https://res.cloudinary.com/ux-ui-designer/image/upload/v1631905009/Assets/icon-instagram_ruofi3.svg",
+      trend: true,
     },
     {
       id: uuid(),
@@ -54,6 +58,66 @@ function App() {
       stats: "subscribers",
       state: 144,
       icon: "https://res.cloudinary.com/ux-ui-designer/image/upload/v1631905009/Assets/icon-youtube_j93d63.svg",
+      trend: false,
+    },
+  ];
+
+  const overview = [
+    {
+      id: uuid(),
+      title: "Page Views",
+      icon: "https://res.cloudinary.com/ux-ui-designer/image/upload/v1631905009/Assets/icon-facebook_x09bqx.svg",
+      numbers: 87,
+      stats: 3,
+    },
+    {
+      id: uuid(),
+      title: "Likes",
+      icon: "https://res.cloudinary.com/ux-ui-designer/image/upload/v1631905009/Assets/icon-facebook_x09bqx.svg",
+      numbers: 52,
+      stats: 2,
+    },
+    {
+      id: uuid(),
+      title: "Likes",
+      icon: "https://res.cloudinary.com/ux-ui-designer/image/upload/v1631905009/Assets/icon-instagram_ruofi3.svg",
+      numbers: 5462,
+      stats: 2257,
+    },
+    {
+      id: uuid(),
+      title: "Profile Views",
+      icon: "https://res.cloudinary.com/ux-ui-designer/image/upload/v1631905009/Assets/icon-instagram_ruofi3.svg",
+      numbers: 25123,
+      stats: 137,
+    },
+    {
+      id: uuid(),
+      title: "Retweets",
+      icon: "https://res.cloudinary.com/ux-ui-designer/image/upload/v1631905009/Assets/icon-twitter_xaf0jr.svg",
+      numbers: 117,
+      stats: 303,
+    },
+    {
+      id: uuid(),
+      title: "Likes",
+      icon: "https://res.cloudinary.com/ux-ui-designer/image/upload/v1631905009/Assets/icon-twitter_xaf0jr.svg",
+      numbers: 507,
+      stats: 553,
+    },
+    {
+      id: uuid(),
+      title: "Likes",
+      icon: "https://res.cloudinary.com/ux-ui-designer/image/upload/v1631905009/Assets/icon-youtube_j93d63.svg",
+      numbers: 92,
+      stats: 19,
+    },
+    {
+      id: uuid(),
+      title: "Total Views",
+      icon: "https://res.cloudinary.com/ux-ui-designer/image/upload/v1631905009/Assets/icon-youtube_j93d63.svg",
+      numbers: 1407,
+      stats: 12,
     },
   ];
 
@@ -81,11 +145,18 @@ function App() {
       </header>
       <main className={main}>
         <div className={top}>
-          {users.map((card) => {
-            return <Card key={card.id} data={card} />;
-          })}
+          {users.map((card) => (
+            <Card key={card.id} data={card} />
+          ))}
         </div>
-        <div className={bottom}></div>
+
+        <h2 className={subheading}>Overview - Today</h2>
+
+        <div className={bottom}>
+          {overview.map((label) => (
+            <Label key={label.id} data={label} />
+          ))}
+        </div>
       </main>
     </Fragment>
   );

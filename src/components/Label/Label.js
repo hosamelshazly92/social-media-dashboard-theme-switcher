@@ -1,6 +1,6 @@
 import { container } from "./Label.module.css";
 
-const Label = () => {
+const Label = ({ data }) => {
   return <div className={container}></div>;
 };
 
