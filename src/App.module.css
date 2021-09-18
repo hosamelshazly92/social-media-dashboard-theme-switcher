@@ -101,6 +101,7 @@
 }
 
 .subheading {
+  font-size: 28px;
   font-weight: 800;
   color: #66697c;
   margin: 64px 0 32px 0;
@@ -123,14 +124,20 @@
   color: #fff;
 }
 
+.seperator {
+  display: none;
+}
+
 @media (max-width: 1400px) {
   .container {
     flex-direction: column;
     align-items: flex-start;
-    margin: 0 32px;
+    width: 310px;
+    margin: auto;
   }
 
   .seperator {
+    display: block;
     width: 100%;
     border: 1px solid rgba(240, 240, 240, 0.8);
     margin: 16px 0;
@@ -159,8 +166,9 @@
   }
 
   .subheading {
-    margin-left: 32px;
-    margin-right: 32px;
+    font-size: 24px;
+    width: 310px;
+    margin: 16px auto;
   }
 
   .bottom {
