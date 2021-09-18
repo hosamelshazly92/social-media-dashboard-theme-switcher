@@ -122,3 +122,49 @@
 .darkSubheading {
   color: #fff;
 }
+
+@media (max-width: 1400px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 32px;
+  }
+
+  .seperator {
+    width: 100%;
+    border: 1px solid rgba(240, 240, 240, 0.8);
+    margin: 16px 0;
+  }
+
+  .main {
+    top: -130px;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  p.paragraph {
+    margin-right: 0;
+  }
+
+  .right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subheading {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+}

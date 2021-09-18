@@ -17,6 +17,7 @@ import {
   darkHeading,
   darkMain,
   darkSubheading,
+  seperator,
 } from "./App.module.css";
 import Card from "./components/Card/Card";
 import Label from "./components/Label/Label";
@@ -152,6 +153,7 @@ function App() {
               {users.reduce((acc, usr) => acc + usr.numbers, 0)}
             </p>
           </div>
+          <hr className={seperator} />
           <div className={right}>
             <span className={paragraph}>Dark Mode</span>
             <div className={switchDiv}>
