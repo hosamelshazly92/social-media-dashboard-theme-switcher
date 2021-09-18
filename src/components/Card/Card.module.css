@@ -87,3 +87,20 @@
   width: 8px;
   height: 4px;
 }
+
+.darkContainer {
+  background-color: #252b43;
+}
+
+.darkContainer:hover {
+  background-color: #333a56;
+}
+
+.darkName,
+.darkStats {
+  color: #b6b9ca;
+}
+
+.darkNumber {
+  color: #fff;
+}

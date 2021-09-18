@@ -1,4 +1,5 @@
 import {
+  darkSection,
   header,
   main,
   top,
@@ -12,13 +13,22 @@ import {
   switchInput,
   switchLabel,
   subheading,
+  darkHeader,
+  darkHeading,
+  darkMain,
+  darkSubheading,
 } from "./App.module.css";
-import { Fragment } from "react";
 import Card from "./components/Card/Card";
 import Label from "./components/Label/Label";
 import { v4 as uuid } from "uuid";
+import { useState } from "react";
 
 function App() {
+  const [dark, setDark] = useState(false);
+  const handleClick = () => {
+    setDark(!dark);
+  };
+
   const users = [
     {
       id: uuid(),
@@ -130,11 +140,13 @@ function App() {
   ];
 
   return (
-    <Fragment>
-      <header className={header}>
+    <div className={`${dark ? darkSection : ""}`}>
+      <header className={`${header} ${dark ? darkHeader : ""}`}>
         <div className={container}>
           <div className={left}>
-            <h1 className={heading}>Social Media Dashboard</h1>
+            <h1 className={`${heading} ${dark ? darkHeading : ""}`}>
+              Social Media Dashboard
+            </h1>
             <p className={paragraph}>
               Total Followers:&nbsp;
               {users.reduce((acc, usr) => acc + usr.numbers, 0)}
@@ -144,29 +156,35 @@ function App() {
             <span className={paragraph}>Dark Mode</span>
             <div className={switchDiv}>
               <input id="switch" className={switchInput} type="checkbox" />
-              <label className={switchLabel} htmlFor="switch">
+              <label
+                className={switchLabel}
+                htmlFor="switch"
+                onClick={handleClick}
+              >
                 Toggle
               </label>
             </div>
           </div>
         </div>
       </header>
-      <main className={main}>
+      <main className={`${main} ${dark ? darkMain : ""}`}>
         <div className={top}>
           {users.map((card) => (
-            <Card key={card.id} data={card} />
+            <Card key={card.id} data={card} darkMode={dark} />
           ))}
         </div>
 
-        <h2 className={subheading}>Overview - Today</h2>
+        <h2 className={`${subheading} ${dark ? darkSubheading : ""}`}>
+          Overview - Today
+        </h2>
 
         <div className={bottom}>
           {overview.map((label) => (
-            <Label key={label.id} data={label} />
+            <Label key={label.id} data={label} darkMode={dark} />
           ))}
         </div>
       </main>
-    </Fragment>
+    </div>
   );
 }
 

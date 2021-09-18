@@ -14,24 +14,34 @@ import {
   green,
   red,
   arrow,
+  darkContainer,
+  darkName,
+  darkNumber,
+  darkStats,
 } from "./Card.module.css";
 
-const Card = ({ data }) => {
+const Card = ({ data, darkMode }) => {
   return (
     <div
       className={`${container} ${
         data.type === "facebook" ? facebookBorder : ""
       } ${data.type === "twitter" ? twitterBorder : ""} ${
         data.type === "insatgram" ? instagramBorder : ""
-      } ${data.type === "youtube" ? youtubeBorder : ""}`}
+      } ${data.type === "youtube" ? youtubeBorder : ""} ${
+        darkMode ? darkContainer : ""
+      }`}
     >
       <div className={section}>
         <img className={icon} src={data.icon} alt={`${data.type} icon`} />
-        <span className={name}>{data.name}</span>
+        <span className={`${name} ${darkMode ? darkName : ""}`}>
+          {data.name}
+        </span>
       </div>
 
-      <p className={number}>{data.numbers}</p>
-      <p className={stats}>{data.stats}</p>
+      <p className={`${number} ${darkMode ? darkNumber : ""}`}>
+        {data.numbers}
+      </p>
+      <p className={`${stats} ${darkMode ? darkStats : ""}`}>{data.stats}</p>
       <div className={row}>
         <img
           className={arrow}

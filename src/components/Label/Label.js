@@ -9,17 +9,24 @@ import {
   arrow,
   red,
   green,
+  darkContainer,
+  darkTitle,
+  darkNumber,
 } from "./Label.module.css";
 
-const Label = ({ data }) => {
+const Label = ({ data, darkMode }) => {
   return (
-    <div className={container}>
+    <div className={`${container} ${darkMode ? darkContainer : ""}`}>
       <div className={top}>
-        <h3 className={title}>{data.title}</h3>
+        <h3 className={`${title} ${darkMode ? darkTitle : ""}`}>
+          {data.title}
+        </h3>
         <img className={icon} src={data.icon} alt={`${data.title} icon`} />
       </div>
       <div className={bottom}>
-        <p className={number}>{data.numbers}</p>
+        <p className={`${number} ${darkMode ? darkNumber : ""}`}>
+          {data.numbers}
+        </p>
         <div className={trend}>
           <img
             className={arrow}
